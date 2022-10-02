@@ -429,8 +429,8 @@ def  train_epoch(device, model,opt, dataloader,progress):
 
 	for i,(data,target) in enumerate(dataloader):
 		
-		data.to(device)
-		target.to(device)
+		data = data.to(device)
+		target = target.to(device)
 #		for j in range(0,data.shape[0]):
 		
 		output=model(data)
